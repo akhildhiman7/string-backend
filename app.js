@@ -76,7 +76,7 @@ function encoder(st){
   let ln = st.length;
   let no = 0;
   for(let i=0;i<ln;i++){ 
-      no = no*26 + st[i].charCodeAt(0) - 96
+      no = no*27 + st[i].charCodeAt(0) - 96
   }
 
   let boom = ''
@@ -100,8 +100,8 @@ function decoder(boom){
   result = ''
   while( no > 0)
       {
-      result = String.fromCharCode(no%26 + 96) + result
-      no = Math.floor(no/26)
+      result = String.fromCharCode(no%27 + 96) + result
+      no = Math.floor(no/27)
       }
   return result
 }
